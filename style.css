@@ -1,0 +1,41 @@
+html{
+    margin:0;
+    padding:0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.centerCenter{
+    align-items: center;
+    justify-content: center;
+}  
+
+.container{
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.myButton {
+    position: absolute;
+
+}
+
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+
+.myButton:active {
+	position:relative;
+}
+
+.marg{
+    padding-top: 50px;
+}
