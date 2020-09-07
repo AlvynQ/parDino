@@ -1,4 +1,3 @@
-
 class Dice {
     constructor(name, img, value, contrains) {
       this.name = name;
