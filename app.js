@@ -13,6 +13,7 @@
 //               -1];
 
 const faceDice = [{
+    name : "T-rex le Carnasier";
     img : "vicking.png",
     value : 3,
     contrainte : null
