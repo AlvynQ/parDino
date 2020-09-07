@@ -12,12 +12,47 @@
 //               microraptor,
 //               -1];
 
+const faceDice = [{
+    img : "vicking.png",
+    value : 3,
+    contrainte : null
+},
+    {
+    img : "assasin.png",
+    value : 1,
+    contrainte : "nullVicking"
+},
+    {
+    img : "mage.png",
+    value : null,
+    contrainte : "nullVicking"
+},
+{
+    img : "bouclier.png",
+    value : 10,
+   contrainte : "nullVicking"
+},
+{
+    img : "épée.png",
+    value : 8,
+    contrainte : "nullVicking"
+},
+{
+    img : "bague.png",
+    value : 2,
+    contrainte : "nullVicking"
+},
+
+]
+
 let nbDice = 7; 
 
-let random = 0;
-let maxRandom = 6;
+let maxRandom = faceDice.length;
 
-let fullDiceArray = [];
+//let fullDiceArray = [];
+// let tabfullDice = fullDiceArray.push(random);
+    
+
 
 let spinosaure = 0;
 let microraptor = 0;
@@ -27,17 +62,16 @@ let brachiosaure = 2;
 let pierreExt = -1;
 
 
-let   dice = document.querySelectorAll(".dice");
+const dice = document.querySelectorAll(".dice");
 
 function randomDice(){
     let i = 0;
 
     for (; i < nbDice ; i++) {
-    random = 1 + Math.floor(Math.random() * maxRandom);
+    const random = Math.floor(Math.random() * maxRandom);
     
-    let tabfullDice = fullDiceArray.push(random);
-    dice[i].innerHTML = random;
-    console.log(fullDiceArray);
+    dice[i].innerHTML = `<data-value="${faceDice[random].value}">${faceDice[random].value}  <img src="./img/${faceDice[random].img}">`;
+    console.log(i);
     }
     play();
 }
