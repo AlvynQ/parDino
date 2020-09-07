@@ -14,39 +14,38 @@
 
 let nbDice = 7; 
 
-let random;
+let random = 0;
+let maxRandom = 6;
 
-let nbFace = 6 ;
+let fullDiceArray = [];
 
-let spinosaure = 0 ;
-let microraptor = 0 ;
-let ankylosaure = 1 ;
+let spinosaure = 0;
+let microraptor = 0;
+let ankylosaure = 1;
 let tRex = 3;
-let brachiosaure = 2 ;
-let pierreExt = -1 ;
+let brachiosaure = 2;
+let pierreExt = -1;
 
-
-let dino = [spinosaure,
-            microraptor, 
-            ankylosaure,
-            tRex,
-            brachiosaure,
-            pierreExt];
 
 let   dice = document.querySelectorAll(".dice");
 
 function randomDice(){
-
-    random = 1 + Math.floor(Math.random() * nbFace);
-    dispatchDice();
-    }
-
-function dispatchDice () {
     let i = 0;
+
+    for (; i < nbDice ; i++) {
+    random = 1 + Math.floor(Math.random() * maxRandom);
     
-        for (; i < nbDice ; i++) {
-            dice[i].innerHTML = random;
-            console.log(random);
-        }
+    let tabfullDice = fullDiceArray.push(random);
+    dice[i].innerHTML = random;
+    console.log(fullDiceArray);
     }
+    play();
+}
+
+function play(){
+
+
+
+}
+
   
