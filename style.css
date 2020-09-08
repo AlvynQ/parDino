@@ -23,18 +23,8 @@ html{
     margin-left: 10px;
 }
 
-.myButton {
-    position: absolute;
 
-}
 
-.myButton:hover {
-	background-color:#5cbf2a;
-}
-
-.myButton:active {
-	position:relative;
-}
 
 img{
     position: relative;
