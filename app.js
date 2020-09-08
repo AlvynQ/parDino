@@ -1,3 +1,4 @@
+
 class Dice {
     constructor(name, img, value, contrains) {
       this.name = name;
@@ -34,7 +35,7 @@ function randomDice(){
     for (; i < nbDice ; i++) {
     const random = Math.floor(Math.random() * maxRandom);
     
-    dice[i].innerHTML = `<data-value="${diceFaceArray[random].value}">${diceFaceArray[random].value}  <img src="./img/${diceFaceArray[random].img}">`;
+    dice[i].innerHTML = `<data-value="${diceFaceArray[random].value}"><p>${diceFaceArray[random].value}</p>  <img src="./img/${diceFaceArray[random].img}">`;
     console.log(i);
     }
     play();
