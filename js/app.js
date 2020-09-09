@@ -1,3 +1,7 @@
+
+
+////////////////debut du random
+
 class Dice {
     constructor(name, imgName, value, contrains) {
       this.name = name;
@@ -42,10 +46,56 @@ function randomDice(){
     }
 }
 
-// function play(){
+//////////////// drumg and drooooooommmppppppppppppppss the bass 
+
+const containers = document.querySelectorAll('.container');
+
+let draggedItem = null;
+
+for (let i = 0; i < dice.length; i++){
+        const container = dice[i];
+
+
+        container.addEventListener('dragstart', function(){
+
+            draggedItem = container;
+
+            setTimeout(function() {
+                container.style.display = 'none';
+            },0);
+
+        });
+
+
+        container.addEventListener('dragend', function(){
+
+            setTimeout(function() {
+                draggedItem.style.display = 'block';
+                draggedItem = null;
+            },0);
+            
+        });
 
 
 
-// }
+        for (let j = 0; j < containers.length; j++){
+            const container = containers[j];
+
+            container.addEventListener('dragover', function(e){
+                e.preventDefault();
+            });
+            container.addEventListener('dragenter', function(e) { 
+                e.preventDefault();
+            })
+            container.addEventListener('drop', function(e) {
+                this.append(draggedItem);
+            });
+
+        }
+
+}
+
+
+//////////////fin du drag
 
   

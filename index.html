@@ -3,49 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Par Dino</title>
 </head>
 <body>
     
 
-
-    <div class="flex centerCenter">
-
-        <div class="container dice">
-
-        </div>
-        <div class="container dice">
-
-        </div>
-        <div class="container dice">
-
-        </div>
-        <div class="container dice">
-
-        </div>
-        <div class="container dice">
-
-        </div>
-        <div class="container dice">
-
-        </div>
-        <div class="container dice">
-
-        </div>
-
+<div class="containers">
+    <div class="container flex centeCenter">
+        <div class="dice contDice" draggable="true" >1</div>
+        <div class="dice contDice" draggable="true" >2</div>
+        <div class="dice contDice" draggable="true" >3</div>
+        <div class="dice contDice" draggable="true" >4</div>
+        <div class="dice contDice" draggable="true" >5</div>
+        <div class="dice contDice" draggable="true" >6</div>
+        <div class="dice contDice" draggable="true" >7</div>
     </div>
 
-    <img class="l"  id="interface" src="img/gauche.png" alt="">
+    <div class="container"></div>
+    <div class="container"></div>
+</div>
+
+
+    <!-- <img class="l"  id="interface" src="img/gauche.png" alt="">
        
     <img class="r" id="interface" src="img/droite.png" alt="">
-    
-    
-
+     -->
     <div>  
     <input type="image"  src="img/os.png" id="button"  onclick="randomDice()" class="myButton">
     </div>
 
 </body>
-<script src="app.js"></script>
+
+
+<script src="js/app.js"></script>
+
 </html>
